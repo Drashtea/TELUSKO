@@ -1,0 +1,13 @@
+Pascal triangle using recursion :  To Print N rows ,take input From The User and then in Recursion() method print Elements of the each row using 2 loops  outer loop  will focus on each row and inner loop will focus on elements of each row .
+To print elements of each row method  pascal will be called . It will compute elements using recursive calls for pascal method and compute the value  by adding i-1 (previous row ) 's  (j-1) element to jth  element of that row . 
+
+Time complexity will be : 2^n where n will be no. of rows.
+because it will calculate each element n times .
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Pascal triangle using memoization :  In this technique with the  help of hashmaps to avoid recalculations everytime . so using same method that is used in recursive technique we have maintained one hashmap  which will contain previously calculated values and will add new values to the map if its not in the map .  so everytime while computing first program will check in hashmap to see if it contains the value or not , if it does then use it else calculate it and add it just how we did it in recursive method .
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Pascal triangle using iteration : In this method one 2D array is maintained to store the elements , first we will initialize first element of each row by one . After that by traversing each row compute other elements of the row by adding [row-1][colulmn-1] + [row-1][column]  . after that array is printed in next loop .
+because of 3 loops time complexity of this program will be : n+ n(n+1)/2 + n(n+1)/2   => n*n =>n^2
